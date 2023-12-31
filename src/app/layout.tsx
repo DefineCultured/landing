@@ -90,11 +90,10 @@ export default function RootLayout({
             <Image
               alt="Gradient"
               src="/images/gradient.png"
-              loading="eager"
               width={100}
               height={800}
               className="min-w-[800px] opacity-50 contrast-0"
-              priority
+              priority={true}
               aria-hidden
             />
           </div>

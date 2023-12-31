@@ -32,8 +32,7 @@ export function BrandCard({ name, shortName, shortDescription, content, logo, ur
           alt={name}
           width={200}
           height={200}
-          loading="eager"
-          priority
+          priority={true}
           draggable={false}
           className='opacity-5 bg-blend-overlay rotate-12 select-none'
         />
