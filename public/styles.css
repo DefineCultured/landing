@@ -1,0 +1,385 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeoGram";
+  src: url("/fonts/NeoGram-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeoGram";
+  src: url("/fonts/NeoGram-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+  tab-size: 4;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg,
+img {
+  display: block;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  background: #0a0a0a;
+  color: #fafafa;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.site-header {
+  width: 100%;
+  color: #fff;
+  background: #0a0a0a;
+  border-bottom: 1px solid #262626;
+}
+
+.header-inner,
+.site-main {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 8px;
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  color: #fafafa;
+  font-family: "NeoGram", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.wordmark-small {
+  color: #fff;
+  font-size: 18px;
+  line-height: 16.8px;
+}
+
+.site-main {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 32px 0;
+}
+
+.background-visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-visual img {
+  min-width: 800px;
+  opacity: 0.5;
+  filter: contrast(0);
+}
+
+.wordmark-large {
+  font-size: 80px;
+  line-height: 67.2px;
+}
+
+.brands {
+  margin-top: 48px;
+}
+
+.brands > h2 {
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(to right, #6b7280, #fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: "NeoGram", Arial, sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.brand-card {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  color: #fafafa;
+  background: #0a0a0a;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
+}
+
+.brand-mark {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  overflow: hidden;
+}
+
+.brand-mark img {
+  width: 200px;
+  height: 198.4375px;
+  opacity: 0.05;
+  transform: rotate(12deg);
+  user-select: none;
+}
+
+.brand-card-header {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.brand-card-header h3 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 32px;
+}
+
+.brand-card-header p {
+  margin-top: 6px;
+  color: #cbd5e1;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.brand-description {
+  padding: 0 24px 24px;
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 20px;
+  text-wrap: pretty;
+}
+
+.brand-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 24px 24px;
+}
+
+.brand-link {
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  color: #171717;
+  background: #fafafa;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand-link:hover {
+  background: rgb(250 250 250 / 90%);
+}
+
+.brand-link:focus-visible,
+.social-links a:focus-visible {
+  outline: 1px solid #d4d4d4;
+  outline-offset: 2px;
+}
+
+.brand-link svg {
+  width: 12px;
+  height: 24px;
+  margin-left: 4px;
+}
+
+.site-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 16px 0;
+  color: #9ca3af;
+  border-top: 1px solid #262626;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.error-page {
+  align-items: center;
+  text-align: center;
+}
+
+.error-page section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-links {
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+
+.social-links a {
+  width: 16px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.social-links a + a {
+  margin-left: 12px;
+}
+
+.social-links svg {
+  width: 16px;
+  height: 24px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #2f2f2f;
+  border: 0;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #505050;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+@media (min-width: 640px) {
+  .background-visual {
+    right: 20vw;
+  }
+
+  .brand-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .header-inner {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .brand-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1400px) {
+  .header-inner,
+  .site-main {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wordmark-large {
+    font-size: 64px;
+    line-height: 56px;
+  }
+}
+
+@media (max-width: 380px) {
+  .wordmark-large {
+    font-size: 56px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wordmark-large {
+    font-size: 44px;
+    line-height: 37.6px;
+  }
+}
